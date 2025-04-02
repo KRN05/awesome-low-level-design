@@ -5,6 +5,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+
+here we can have strategy pattern, where recommendation can be done with different strategies
+
+*/
+
 public class MusicRecommender {
     private static MusicRecommender instance;
     private final Map<String, List<Song>> userRecommendations;
