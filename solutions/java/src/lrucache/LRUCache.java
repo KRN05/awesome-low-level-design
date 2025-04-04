@@ -9,6 +9,21 @@ class LRUCache<K, V> {
     private final Node<K, V> head;
     private final Node<K, V> tail;
 
+
+    /*
+            the structure will be  
+            head - node1 - tail
+            
+            when new node is added
+            head - node2 - node1 - tail
+            
+            when node1 is accessed
+            head - node1 - node2 - tail
+            
+            when third node is added and remove is called
+            head - node3 - node1 - tail.     node2 is removed
+    */
+
     public LRUCache(int capacity) {
         this.capacity = capacity;
         cache = new HashMap<>(capacity);
