@@ -82,13 +82,6 @@ public class LFUCache<K, V> {
     public boolean isEmpty() {
         return keyToValue.isEmpty();
     }
-
-    public void clear() {
-        keyToValue.clear();
-        keyToFrequency.clear();
-        frequencyToKeys.clear();
-        minFrequency = 0;
-    }
     
     @Override
     public String toString() {
